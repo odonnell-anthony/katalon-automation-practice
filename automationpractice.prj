@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+   <description></description>
+   <name>automationpractice</name>
+   <tag></tag>
+   <integratedEntity>
+      <productName>qTest</productName>
+      <type>PROJECT</type>
+   </integratedEntity>
+   <UUID>d736c4e4-9c3f-4f5c-944f-78ee0422a47e</UUID>
+   <migratedVersion>5.4.0</migratedVersion>
+   <pageLoadTimeout>0</pageLoadTimeout>
+   <recentExpandedTreeEntityIds>Test Cases</recentExpandedTreeEntityIds>
+   <recentExpandedTreeEntityIds>Object Repository</recentExpandedTreeEntityIds>
+   <recentExpandedTreeEntityIds>Object Repository/Page_Login</recentExpandedTreeEntityIds>
+   <recentExpandedTreeEntityIds>Object Repository/Page_My Store</recentExpandedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Test Cases/Scenario 1</recentOpenedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Object Repository/Page_My Store/Modal/Proceed_chevron</recentOpenedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Object Repository/Page_My Store/Modal/Proceed_button</recentOpenedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Object Repository/Page_My Store/span_Add to cart</recentOpenedTreeEntityIds>
+</Project>

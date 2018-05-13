@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebElementEntity>
+   <description></description>
+   <name>Total</name>
+   <tag></tag>
+   <elementGuidId>73d9bf22-a585-4d56-8df6-ca23cc04707e</elementGuidId>
+   <selectorCollection>
+      <entry>
+         <key>BASIC</key>
+         <value>/html/body/div[1]/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[3]/span[count(. | //*[@class = 'span.ajax_block_cart_total:nth-child(2)']) = count(//*[@class = 'span.ajax_block_cart_total:nth-child(2)'])]</value>
+      </entry>
+   </selectorCollection>
+   <selectorMethod>BASIC</selectorMethod>
+   <useRalativeImagePath>false</useRalativeImagePath>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>xpath</name>
+      <type>Main</type>
+      <value>/html/body/div[1]/div[1]/header/div[3]/div/div/div[4]/div[1]/div[2]/div[3]/span</value>
+   </webElementProperties>
+   <webElementProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>css</name>
+      <type>Main</type>
+      <value>span.ajax_block_cart_total:nth-child(2)</value>
+   </webElementProperties>
+</WebElementEntity>
