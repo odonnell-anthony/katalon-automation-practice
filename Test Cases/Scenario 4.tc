@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
-   <description>Positive test : add a product to check out, register as new customer and complete the checkout</description>
+   <description>When you do scenario 1 can you also confirm the total is calculated correctly</description>
    <name>Scenario 4</name>
    <tag></tag>
    <comment></comment>
