@@ -22,68 +22,91 @@ import internal.GlobalVariable as GlobalVariable
 'Open Browser'
 WebUI.openBrowser('')
 
+'Maximize Browser'
 WebUI.maximizeWindow(FailureHandling.CONTINUE_ON_FAILURE)
 
 'Navigate to URL'
 WebUI.navigateToUrl('http://www.automationpractice.com')
 
+'Wait for the image of the product we want to be visible'
 WebUI.waitForElementPresent(findTestObject('Page_My Store/img_replace-2x img-responsive'), 0)
 
+'Scroll to image of the product we want'
 WebUI.scrollToElement(findTestObject('Page_My Store/img_replace-2x img-responsive'), 0, FailureHandling.STOP_ON_FAILURE)
 
-'Mouse over element'
+'Mouse over image of the product we want'
 WebUI.mouseOver(findTestObject('Page_My Store/img_replace-2x img-responsive'))
 
+'Get the cost of the product to be added to the cart'
 originalCost = WebUI.getText(findTestObject('Page_My Store/span_16.51'))
 
-println originalCost
+'Strip dollar sign off the original cost'
+originalCostStripped = originalCost.substring(1)
 
-originalCostStripped = (originalCost).substring(1)
+'Convert stripped original cost from string to float'
+float originalCostFloat = Float.parseFloat(originalCostStripped)
 
-println originalCostStripped
-
-float originalCostFloat = Float.parseFloat(originalCostStripped);
-
-float originalCostAdded = originalCostFloat + originalCostFloat
-
-float originalCostRounded = originalCostAdded.round(2)
-
-println originalCostRounded
-
-float expected = 33.02
-
-assert originalCostRounded == expected
-
-/*
 'Wait for element visible'
 WebUI.waitForElementVisible(findTestObject('Page_My Store/span_Add to cart'), 0)
 
 'Click button'
 WebUI.click(findTestObject('Page_My Store/span_Add to cart'))
 
-WebUI.delay(1)
+'Wait for element Total-products to be visible'
+WebUI.waitForElementVisible(findTestObject('Page_My Store/Modal/Total-products'), 0)
 
-WebUI.getText(findTestObject('Page_My Store/Modal/Total-products'))
+'Get cost of products'
+productsCost = WebUI.getText(findTestObject('Page_My Store/Modal/Total-products'))
 
-WebUI.getText(findTestObject('Page_My Store/Modal/Total-shipping'))
+'Strip dollar sign off products cost'
+productsCostStripped = productsCost.substring(1)
 
-WebUI.getText(findTestObject('Page_My Store/Modal/Total'))
+'Convert stripped product cost from string to float'
+float productsCostFloat = Float.parseFloat(productsCostStripped)
 
-WebUI.click(findTestObject('Page_My Store/Modal/Proceed_button'))
+'Check the products cost matches the original cost of the item added to cart'
+try {
+    assert productsCostFloat == originalCostFloat
+    println('Expected Product price found')
+}
+catch (Exception e) {
+    throw e
+} 
 
-WebUI.verifyElementPresent(findTestObject('Page_Order - My Store/h1_Shopping-cart summaryYour s'), 0)
+'Get the shipping cost'
+shippingCost = WebUI.getText(findTestObject('Page_My Store/Modal/Total-shipping'))
 
-WebUI.getText(findTestObject('Page_Order - My Store/Total_products'))
+'Strip dollar sign off the shipping cost'
+shippingCostStripped = shippingCost.substring(1)
 
-WebUI.getText(findTestObject('Page_Order - My Store/Total_shipping'))
+'Convert stripped shipping cost from string to float'
+float shippingCostFloat = Float.parseFloat(shippingCostStripped)
 
-WebUI.getText(findTestObject('Page_Order - My Store/Total_price_without_tax'))
+'Add product price and shipping together'
+float productsPlusShippingCost = productsCostFloat + shippingCostFloat
 
-WebUI.getText(findTestObject('Page_Order - My Store/Total_price'))
+'Round up the cost to two decimal places'
+float expectedCost = productsPlusShippingCost.round(2)
 
-*/
-WebUI.delay(10)
+'Get the Cart total price'
+totalCost = WebUI.getText(findTestObject('Page_My Store/Modal/Total'))
+
+'Strip the dollar sign off the total cost'
+totalCostStripped = totalCost.substring(1)
+
+'Convert stripped total cost from string to float'
+float totalCostFloat = Float.parseFloat(totalCostStripped)
+
+'Check the cart total cost matches what is expected based on product cost and shipping cost'
+try {
+    assert expectedCost == totalCostFloat
+    println('Expected total price including shipping found')
+}
+catch (Exception e) {
+    throw e
+} 
+
 
 'Close the Browser'
-not_run: WebUI.closeBrowser()
+WebUI.closeBrowser()
 
