@@ -70,7 +70,7 @@ Scenario 4 will check the price of the item at the point it was added to the car
 * Click to open the git drop down and choose clone
 * Enter this repositorys address: https://anthonyfromtheuk@bitbucket.org/anthonyfromtheuk/automationpractice.git
 * Click next followed by next and then finish
-* You can now run either of the two test cases by expanding Test Cases and double clicking on to load it up and then clicking the play button on the ribbon!
+* You can now run either of the two test cases by expanding Test Cases and double clicking on either scenario test case to load it up and then click the play button on the ribbon!
 
 
 ### Want to Contribute? ###
