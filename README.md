@@ -11,7 +11,9 @@ Newcomers to Katalon interested in automated web testing, looking for examples
 ### What is Katalon Studio? ###
 
 Freeware tool for easy creation of automated web and mobile testing, with little to no programming required
+
 See [here ](https://www.katalon.com/about-us/)for official About page
+
 See [here ](http://www.qatestingtools.com/testing-tool/katalon_studio)for more details from QA Testing Tools
 
 ### What exactly is this? ###
@@ -44,7 +46,7 @@ Four scenarios in total were requested:
 
 Scenario 1 runs all the way through from clicking to add an item to shopping cart through registration and on to confirmation of order.
 
-Scenario 2 has been left our purposefully for others to figure out using what is given in the scenario 1 test case, more test objects will need creating.
+Scenario 2 has been left out purposefully for others to figure out using what is given in the scenario 1 test case, more test objects will need creating.
 
 Scenario 3 that was requested is actually impossible as the webpage given doesn`t send out recovery emails?
 
@@ -63,7 +65,7 @@ Scenario 4 will check the price of the item at the point it was added to the car
 * Expand the Katalon option and click on Git
 * Tick the checkbox to Enable Git Integration
 * Click Apply followed by OK to close Katalon Studio preferences
-* The git icon on the ribbon second from the right is now active 
+* The git icon on the main window ribbon second from the right is now active 
 
     ![Git icon on ribbon](http://tinyimg.io/i/sENbJOf.png)
 
